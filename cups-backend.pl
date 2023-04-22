@@ -25,6 +25,9 @@ my $user=$ARGV[1];
 my $jobName=$ARGV[2];
 my $copies=$ARGV[3];
 
+# Fix for popup not showing https://askubuntu.com/questions/872792/what-is-xdg-runtime-dir
+system("xhost","si:localuser:root");
+
 # Parse Env
 my $tmpFolder="/tmp";
 # using a anonymous function to keep global variables clean
